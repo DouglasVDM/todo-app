@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Container, FormControl, TextField } from '@material-ui/core';
 
 
-const TodoForm = () => {
+const TodoForm = ({ addTodo }) => {
+  const [text, setText] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addTodo(text);
+    setText('');
+  };
+
   return (
     <div>
       <Container maxWidth='sm'>
-        <form>
+        <form onSubmit={handleSubmit}>
           <FormControl fullWidth={true}>
-            <TextField label='I will do this' required={true} />
-            <Button variant='contained' color='primary' type='submit' style={{marginTop:5}}>
-              Add todo
+            <TextField
+              label='I will do this'
+              required={true}
+              value={text}
+              onChange={(event) => setText(event.target.value)}
+            />
+            <Button variant='contained' color='primary' type='submit' style={{ marginTop: 5 }}>
+              Add
             </Button>
           </FormControl>
         </form>
