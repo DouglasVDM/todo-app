@@ -1,3 +1,20 @@
+# Todo App
+
+### `Start by adding your todo on the line above the Add button.`
+
+<br>
+<br>
+
+### `Once created, you can click the "red" Check Icon to mark your todo as completed.`
+
+<br>
+<br>
+
+### `After marking a few todos as completed. You can click the "red" Delete icon to remove the completed todo.`
+
+<br>
+<br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
