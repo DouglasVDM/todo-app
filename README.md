@@ -1,5 +1,7 @@
 # Todo App
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9f2b3fdb-c66f-4842-a034-f438697a2ef5/deploy-status)](https://app.netlify.com/sites/simple-todo-app-2021/deploys)
+
 ### `Start by adding your todo on the line above the Add button.`
 
 <br>
