@@ -17,7 +17,7 @@ const TodoForm = ({ addTodo }) => {
         <form onSubmit={handleSubmit}>
           <FormControl fullWidth={true}>
             <TextField
-              label='I will do this'
+              label='What still needs to be done?'
               required={true}
               value={text}
               onChange={(event) => setText(event.target.value)}

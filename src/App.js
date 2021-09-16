@@ -1,4 +1,6 @@
+import { Container, Typography } from "@material-ui/core";
 import { useState } from "react";
+import { v4 as uuid } from "uuid";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 
@@ -14,7 +16,7 @@ function App() {
 
   const addTodo = (text) => {
     const newTodo = {
-      id: 10,
+      id: uuid(),
       title: text,
       isComplete: false
     };
@@ -27,6 +29,9 @@ function App() {
 
   return (
     <div>
+      <Container maxWidth='sm'>
+        <Typography variant="h3" component='h1' >TodoList</Typography>
+      </Container>      
       <TodoForm addTodo={addTodo} />
       <TodoList todos={todos} checkTodo={checkTodo} deleteTodo={deleteTodo} />
     </div>

@@ -6,6 +6,7 @@ const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo }) => {
   const markComplete = () => checkTodo(id);
   const delTodo = () => deleteTodo(id);
   const todoStyle = isCompleted ? { textDecoration: 'line-through' } : { textDecoration: 'none' };
+  const iconStyle = isCompleted ? { color: 'green' } : { color: 'red' };
 
   return (
     <div>
@@ -18,7 +19,7 @@ const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo }) => {
               style={todoStyle}
             >
               <IconButton onClick={markComplete}>
-                <Check style={{ color: 'green' }} />
+                <Check style={iconStyle} />
               </IconButton>
               {title}
               <IconButton
