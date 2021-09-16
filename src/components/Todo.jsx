@@ -2,7 +2,7 @@ import { Card, CardContent, Container, IconButton, Typography } from '@material-
 import { Check, Delete } from '@material-ui/icons'
 import React from 'react'
 
-const Todo = () => {
+const Todo = ({title}) => {
   return (
     <div>
       <Container>
@@ -12,7 +12,7 @@ const Todo = () => {
               <IconButton>
                 <Check style={{ color: 'green' }} />
               </IconButton>
-              Todo 1
+              {title}
               <IconButton style={{ float: 'right' }}>
                 <Delete style={{ color: 'red' }} />
               </IconButton>
